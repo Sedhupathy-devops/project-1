@@ -1,0 +1,21 @@
+name: Resume
+
+on:
+  workflow_dispatch:
+    inputs:
+      Name:
+        required: true
+      JOB:
+        required: true
+      DOB:
+        required: true
+      Email-id:
+        required: true
+      Gender:
+        required: true
+jobs:
+  Resumee:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+    
