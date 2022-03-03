@@ -14,7 +14,8 @@ on:
       Gender:
         required: true
 jobs:
-  build:
-    permissions:
-      issues: write
+  Resumee:
     runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+    
