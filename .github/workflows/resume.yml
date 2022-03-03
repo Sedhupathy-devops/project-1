@@ -13,3 +13,8 @@ on:
         required: true
       Gender:
         required: true
+jobs:
+  build:
+    permissions:
+      issues: write
+    runs-on: ubuntu-latest
