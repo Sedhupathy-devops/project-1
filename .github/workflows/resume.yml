@@ -18,4 +18,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: check location
+        run: pwd
+      - name:  modify template
+        run: bash setup.sh
+    
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
     
