@@ -49,5 +49,6 @@ jobs:
             [1]: https://github.com/peter-evans/create-pull-request
       - uses: actions/jekyll-build-pages@v1-beta
       - run: tar --dereference --hard-dereference --directory _site/ -cvf artifact.tar .
+      - uses: actions/upload-artifact@main
     
     
