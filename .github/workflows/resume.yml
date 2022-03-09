@@ -13,17 +13,24 @@ on:
         required: true
       Gender:
         required: true
+        type: choice
+        options:
+          - M
+          - F
 jobs:
   Resumee:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: check location
-        run: pwd
       - name:  modify template
         run: |
+            if [[ "${{github.event.inputs.Gender}}" == "M" ]]; then
+            sed -i "s+images+images/boy.jfif+g" index.html
+            else
+                sed -i "s+images+images/girl.jpg+g" index.html
+            fi
             sed -i "s+USERNAME+${{github.event.inputs.Name}}+g" index.html
-            sed -i "s+USERJOB+$J${{github.event.inputs.JOB}}+g" index.html
+            sed -i "s+USERJOB+${{github.event.inputs.JOB}}+g" index.html
             sed -i "s+DATEOFBIRTH+${{github.event.inputs.DOB}}+g" index.html
             sed -i "s+EMAILID+${{github.event.inputs.Email-id}}+g" index.html
             cat index.html
