@@ -40,7 +40,7 @@ jobs:
         with:
           commit-message: Resume for ${{github.event.inputs.Name}}
           branch: ${{github.event.inputs.Name}}
-          title: 'Update index.html'
+          title: 'Update index.html for ${{github.event.inputs.Name}}'
           body: |
             Update report
             - Updated with *today's* date
