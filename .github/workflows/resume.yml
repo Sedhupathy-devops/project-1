@@ -23,9 +23,9 @@ jobs:
       - name:  modify template
         run: |
             sed -i "s+USERNAME+${{github.event.inputs.Name}}+g" index.html
-            sed -i "s+USERJOB+$J${{github.events.inputs.JOB}}+g" index.html
-            sed -i "s+DATEOFBIRTH+${{github.events.inputs.DOB}}+g" index.html
-            sed -i "s+EMAILID+${{github.events.inputs.Email-id}}+g" index.html
+            sed -i "s+USERJOB+$J${{github.event.inputs.JOB}}+g" index.html
+            sed -i "s+DATEOFBIRTH+${{github.event.inputs.DOB}}+g" index.html
+            sed -i "s+EMAILID+${{github.event.inputs.Email-id}}+g" index.html
     
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
