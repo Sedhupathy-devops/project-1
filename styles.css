@@ -1,0 +1,74 @@
+body {
+    background-color: #1a1717;
+    color: white;
+  }
+  
+  .imageOne {
+    padding-bottom: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    width:200px;
+    height:200px;
+  }
+
+  .listtag {
+    line-height: 2rem;
+    font-family: "Courier New", Courier, monospace;
+    display: table;
+    margin: 0 auto;
+    padding-left: 105px;
+  }
+
+  p {
+    line-height: 2rem;
+    color: white !important;
+    font-family: "Courier New", Courier, monospace;
+  }
+
+  .mailtag {
+    color: yellow;
+  }
+
+  .headingClass,
+  .moreInfo {
+    color: greenyellow;
+    font-family: "Times New Roman", Times, serif;
+    text-align: center;
+    
+  }
+
+  .navbar {
+    width: 100%;
+    background-color: #2b2b2b;
+    overflow: auto;
+  }
+
+  .navbar a {
+    float: left;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    width: 31.2%;
+    text-align: center;
+   }
+
+   .navbar a:hover {
+     background-color: #000;
+   }
+
+   .navbar a.active {
+     background-color: greenyellow;
+     color:black;
+    }
+
+   @media screen and (max-width: 500px) {
+    .navbar a {
+      float: none;
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+  }
