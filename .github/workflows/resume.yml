@@ -27,9 +27,9 @@ jobs:
             RESUME_FILE=./docs/${{github.event.inputs.Name}}
             cp index.html $RESUME_FILE
             if [[ "${{github.event.inputs.Gender}}" == "M" ]]; then
-            sed -i "s+images+images/boy.jfif+g" index.html
+            sed -i "s+images+images/boy.jfif+g" $RESUME_FILE
             else
-                sed -i "s+images+images/girl.jpg+g" index.html
+                sed -i "s+images+images/girl.jpg+g" $RESUME_FILE
             fi
             sed -i "s+USERNAME+${{github.event.inputs.Name}}+g" $RESUME_FILE
             sed -i "s+USERJOB+${{github.event.inputs.JOB}}+g" $RESUME_FILE
