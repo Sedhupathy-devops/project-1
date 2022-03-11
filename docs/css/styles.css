@@ -51,7 +51,8 @@ body {
     color: white;
     text-decoration: none;
     font-size: 17px;
-    width: 30.2%;
+    width: 30%;
+    margin-left:490px;
     text-align: center;
    }
 
@@ -78,7 +79,9 @@ body {
 
     .navbar a{
       font-size:30px;
+      margin-left:350px;
     }
+
   }
 
   @media screen 
@@ -86,6 +89,9 @@ body {
   and (max-device-width: 653px) {
     p{
       font-size:12px !important;
+    }
+    .navbar a{     
+      margin-left:350px;
     }
   }
 
@@ -98,6 +104,20 @@ body {
 
     .listtag{
       line-height: 3rem;
+    }
+
+    .navbar a{      
+      margin-left:350px;
+    }
+  }
+
+  @media screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px) {
+   
+
+    .navbar a{      
+      margin-left:375px;
     }
   }
 
