@@ -2,69 +2,20 @@
 <html>
   <head>
     <title>Resume Project</title>
-    <style>
-      body {
-        background-color: #1a1717;
-        color: white;
-      }
-      .topnav {
-        overflow: hidden;
-        background-color: #2b2b2b;
-      }
-
-      .topnav a {
-        float: left;
-        color: white;
-        text-align: center;
-        padding: 14px 18px;
-        text-decoration: none;
-        font-size: 16px;
-      }
-
-      .topnav a:hover {
-        background-color: cornsilk;
-        color: grey;
-      }
-
-      .topnav a.active {
-        background-color: gainsboro;
-        color: green;
-      }
-      .imageOne {
-        padding-top: 30px;
-        padding-bottom: 10px;
-      }
-      .listtag {
-        line-height: 2rem;
-        font-family: "Courier New", Courier, monospace;
-      }
-      p {
-        line-height: 2rem;
-        color: white !important;
-        font-family: "Courier New", Courier, monospace;
-      }
-      .mailtag {
-        color: yellow;
-      }
-      .headingClass,
-      .moreInfo {
-        color: greenyellow;
-        font-family: "Times New Roman", Times, serif;
-      }
-    </style>
+    <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
     <div style="padding-left: 15px" class="headingClass">
       <h1>Resume</h1>
       <!-- <h2>My Profile</h2> -->
     </div>
-    <div class="topnav">
+    <div class="navbar">  
       <a class="active" href="#">Home</a>
-      <a href="#">about</a>
-      <a href="#">projects</a>
+      <a href="#">About</a>
+      <a href="#">Projects</a>   
     </div>
-    <div style="padding-left: 20px; padding-bottom: 20px">
-      <img class="imageOne" src="images" width="200" height="180" />
+    <div style="padding-left: 20px; padding-bottom: 20px; padding-top: 60px;">
+      <img class="imageOne" src="images" />
       <ul style="font-size: 18px" class="listtag">
         <li>Name : USERNAME</li>
         <li>Job : USERJOB</li>
@@ -75,18 +26,16 @@
         <h2>More Information</h2>
         <p>
           PostgreSQL Database and Linux System Administrator since 2010.<br />
-
           Worked on a large number of servers in the Belgian health-care area,
           deploying software upgrades, handling database backups and keeping
           systems up-and-running.<br />
-
           Worked for Dalibo between 2017 and 2020: training, support, customer
           consultancy and as much contribution to the PostgreSQL community as
           possible.<br />
-
           Currently working as Database Backup Architect for EDB
         </p>
       </div>
     </div>
   </body>
 </html>
+
