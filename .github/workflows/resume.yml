@@ -30,9 +30,9 @@ jobs:
       - uses: actions/checkout@v2
       - name:  modify template
         run: |
-            RESUME_FILE=./docs/${{github.event.inputs.Name}}.html
+            RESUME_FILE="./docs/${{github.event.inputs.Name}}.html"
             cp index.html $RESUME_FILE
-            ABOUTME=$(echo -e "Hi, this is ${{github.event.inputs.Name}} working as a ${{github.event.inputs.JOB}} holding an work experience of ${{github.event.inputs.Work_experience}}.\n Have proficient knowledge on skills such as ${{github.event.inputs.Skills}}.\n I am currently located at ${{github.event.inputs.Location}}.\n\nThanks for visiting my page!")
+            ABOUTME="Hi, this is ${{github.event.inputs.Name}} working as a ${{github.event.inputs.JOB}} holding an work experience of ${{github.event.inputs.Work_experience}}.<br /> Have proficient knowledge on skills such as ${{github.event.inputs.Skills}}.<br /> I am currently located at ${{github.event.inputs.Location}}.<br /><br />Thanks for visiting my page!"
             if [[ "${{github.event.inputs.Gender}}" == "M" ]]; then
             sed -i "s+images+images/boy.jfif+g" $RESUME_FILE
             else
@@ -42,7 +42,17 @@ jobs:
             sed -i "s+USERJOB+${{github.event.inputs.JOB}}+g" $RESUME_FILE
             sed -i "s+DATEOFBIRTH+${{github.event.inputs.DOB}}+g" $RESUME_FILE
             sed -i "s+EMAILID+${{github.event.inputs.Email-id}}+g" $RESUME_FILE
-            sed -i "s+ABOUT+${ABOUTME}+g" $RESUME_FILE
+            sed -i "s+ABOUT+$ABOUTME+g" $RESUME_FILE
+          
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          commit-message: Resume for "${{github.event.inputs.Name}}"
+          branch: "${{github.event.inputs.Name}}"
+          title: 'Update index.html for ${{github.event.inputs.Name}}'
+          body: |
+            Update report
+            YOUR RESUME IS LOADING .....
     
     
     
