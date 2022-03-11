@@ -42,7 +42,7 @@ jobs:
             sed -i "s+USERJOB+${{github.event.inputs.JOB}}+g" $RESUME_FILE
             sed -i "s+DATEOFBIRTH+${{github.event.inputs.DOB}}+g" $RESUME_FILE
             sed -i "s+EMAILID+${{github.event.inputs.Email-id}}+g" $RESUME_FILE
-            sed -i "s+ABOUT+${ABOUTME}+g" $RESUME_FILE
+            sed -i "s+ABOUT+$ABOUTME+g" $RESUME_FILE
     
     
     
