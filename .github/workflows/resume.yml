@@ -32,7 +32,7 @@ jobs:
         run: |
             RESUME_FILE=./docs/${{github.event.inputs.Name}}.html
             cp index.html $RESUME_FILE
-            ABOUTME=$(echo -e "Hi, this is ${{github.event.inputs.Name}} working as a ${{github.event.inputs.JOB}} holding an work experience of ${{github.event.inputs.Work_experience}}.\n Have proficient knowledge on skills such as ${{github.event.inputs.Skills}}.\n I am currently located at ${{github.event.inputs.Location}}.\n\nThanks for visiting my page!")
+            ABOUTME="Hi, this is ${{github.event.inputs.Name}} working as a ${{github.event.inputs.JOB}} holding an work experience of ${{github.event.inputs.Work_experience}}.<br /> Have proficient knowledge on skills such as ${{github.event.inputs.Skills}}.<br /> I am currently located at ${{github.event.inputs.Location}}.<br /><br />Thanks for visiting my page!")
             if [[ "${{github.event.inputs.Gender}}" == "M" ]]; then
             sed -i "s+images+images/boy.jfif+g" $RESUME_FILE
             else
