@@ -24,7 +24,7 @@ jobs:
       - uses: actions/checkout@v2
       - name:  modify template
         run: |
-            RESUME_FILE=./docs/${{github.event.inputs.Name}}
+            RESUME_FILE=./docs/${{github.event.inputs.Name}}.html
             cp index.html $RESUME_FILE
             if [[ "${{github.event.inputs.Gender}}" == "M" ]]; then
             sed -i "s+images+images/boy.jfif+g" $RESUME_FILE
