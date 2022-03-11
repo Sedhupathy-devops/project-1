@@ -24,16 +24,17 @@ jobs:
       - uses: actions/checkout@v2
       - name:  modify template
         run: |
+            RESUME_FILE=./docs/${{github.event.inputs.Name}}
+            cp index.html $RESUME_FILE
             if [[ "${{github.event.inputs.Gender}}" == "M" ]]; then
             sed -i "s+images+images/boy.jfif+g" index.html
             else
                 sed -i "s+images+images/girl.jpg+g" index.html
             fi
-            sed -i "s+USERNAME+${{github.event.inputs.Name}}+g" index.html
-            sed -i "s+USERJOB+${{github.event.inputs.JOB}}+g" index.html
-            sed -i "s+DATEOFBIRTH+${{github.event.inputs.DOB}}+g" index.html
-            sed -i "s+EMAILID+${{github.event.inputs.Email-id}}+g" index.html
-            cat index.html
+            sed -i "s+USERNAME+${{github.event.inputs.Name}}+g" $RESUME_FILE
+            sed -i "s+USERJOB+${{github.event.inputs.JOB}}+g" $RESUME_FILE
+            sed -i "s+DATEOFBIRTH+${{github.event.inputs.DOB}}+g" $RESUME_FILE
+            sed -i "s+EMAILID+${{github.event.inputs.Email-id}}+g" $RESUME_FILE
     
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
